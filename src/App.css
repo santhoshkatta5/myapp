@@ -42,13 +42,12 @@
 } */
 
 
-  /* flex-direction: column; (.box) */ 
-  /* flex-wrap: wrap;(.box-2) */
-  /* float: left; */
-  /* margin: 4rem; */
-  /* margin: 100px; */
-  /* margin: 100px; */
-
+/* flex-direction: column; (.box) */
+/* flex-wrap: wrap;(.box-2) */
+/* float: left; */
+/* margin: 4rem; */
+/* margin: 100px; */
+/* margin: 100px; */
 
 
 .box {
@@ -82,10 +81,6 @@ h1 {
 marquee {
   font-size: 30px;
   background-color: rgb(125, 226, 43);
-}
-
-.san {
-  background-color: aqua;
 }
 
 button {
