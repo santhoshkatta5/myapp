@@ -3,7 +3,7 @@ import { useState } from 'react';
 import "./App.css";
 
 
-export default function App8() {
+export default function log() {
 
   const [access, setAccessState] = useState({ access: "", className: "" });
 
