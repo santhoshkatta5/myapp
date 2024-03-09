@@ -88,3 +88,26 @@ button {
   height: 30px;
   background-color: aqua;
 }
+
+input {
+  padding: 20px 120px;
+  font-size: 40px;
+}
+
+.success {
+  font-size: 40px;
+  background-color: aqua;
+  border: solid 5px green;
+  height: 80px;
+  width: 400px;
+  color: green;
+}
+
+.fail {
+  height: 80px;
+  width: 400px;
+  font-size: 40px;
+  background-color: rgb(142, 172, 172);
+  border: solid 5px red;
+  color: red
+}

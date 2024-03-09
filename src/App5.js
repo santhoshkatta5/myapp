@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./Header";
 import Footer from "./Footer";
 
 export default function App5() {
-  <div id="products" className="main"></div>
+
+  // <div id="products" className="main"></div>
+  const [cart, setCart] = useState([])
+  // let cart=[]
+  const [cartCount, setCartCount] = useState(0)
   let products = [
     {
       name: "black cofee",
@@ -54,7 +58,6 @@ export default function App5() {
     <div>
       <div className="san">< Header /></div>
       <div className="box">
-
         {products.map((e, i) => (
 
           <div key={i} className="box-2">
@@ -66,7 +69,34 @@ export default function App5() {
               <hr />
               <b>Price : {e.price}</b>
               <hr />
-              <button>ADD</button>
+              <button onClick={() => {
+                setCartCount(cartCount + 1)
+                setCart(cart => [...cart, e])
+              }}>ADD</button>
+              <button onClick={() => setCartCount(cartCount <= 0 ? 0 : cartCount - 1)}>Remove</button>
+            </div>
+          </div>
+        ))}
+
+        {/* This is Cart Item */}
+
+        <img width="80px" height="80px" alt="" src="https://img.freepik.com/free-vector/shopping-cart-realistic_1284-6011.jpg?t=st=1709910617~exp=1709914217~hmac=72df0c4cff0cb85f0410b13fe5f667480ca9a0b7a18b176653f10370cff34343&w=740">
+        </img>
+        Cart - {cartCount}
+
+        {cart.map((e, i) => (
+
+          <div key={i} className="box-2">
+            {<img width="300px" height="300px" alt="" src={e.image}></img>}
+            <div className="content">
+              <b>Name : {e.name}</b>
+              <hr />
+              <b>{e.description}</b>
+              <hr />
+              <b>Price : {e.price}</b>
+              <hr />
+
+              <button onClick={() => setCartCount(cartCount <= 0 ? 0 : cartCount - 1)}>Remove</button>
             </div>
           </div>
         ))}
