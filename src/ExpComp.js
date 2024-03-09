@@ -1,7 +1,10 @@
 import React from 'react'
-
-export default function ExpComp() {
+import { memo } from 'react'
+function ExpComp(props) {
+  // console.log("ExpComp Rendered",props.count,"times")
+  console.log("ExpComp");
   return (
-    <div>ExpComp</div>
+    <div>ExpComp </div>
   )
 }
+export default memo(ExpComp)
