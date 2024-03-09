@@ -6,6 +6,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <App3 names={["santhu","akhi","sankshya"]} marks={[80,70,100]} /> */}
-    <App8/>
+    <log/>
   </React.StrictMode>
 );
